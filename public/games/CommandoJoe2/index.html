@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Commando Joe 2</title>
+	<style type="text/css">
+		html,body {
+			background-color: #000;
+			color: #fff;
+			font-family: helvetica, arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+		}
+		
+		#canvas {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+        
+        .controlsDiv {
+            margin: 1em;
+        }
+		
+		.change {
+			position: absolute;
+			width: 20pc;
+			height: 100pc;
+			overflow: auto;
+		}
+	</style>
+    <meta charset="UTF-8"> </meta>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<script type="text/javascript" src="lib/impact/impact.js"></script>
+	<script type="text/javascript" src="lib/game/main.js"></script>
+	
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="controlsDiv">
+        <b> Controls: </b>
+        <ul>
+            <li> Up/Down/Left/Right: Move </li>
+            <li> X: Jump </li>
+            <li> C: Shoot </li>
+        </ul>
+        <p>
+            Touch controls at the bottom only work on mobile. Pause button works on any device.
+        </p>
+    </div>
+</body>
+</html>
