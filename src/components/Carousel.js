@@ -51,7 +51,7 @@ class Carousel extends React.Component {
     }
     
     render() {
-        if (this.props.images === null || this.props.images.length === 0) {
+        if (this.props.images === undefined || this.props.images === null || this.props.images.length === 0) {
             return ( null )
         }
         
