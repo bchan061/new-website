@@ -10,7 +10,7 @@ class ProjectModal extends React.Component {
     }
     
     clickHandler(e) {
-        if (e.target.className == 'projectModal' || e.target.className == 'projectModalHeader') {
+        if (e.target.className === 'projectModal' || e.target.className === 'projectModalHeader') {
             e.preventDefault()
             this.props.onExit()
         }
@@ -25,7 +25,11 @@ class ProjectModal extends React.Component {
                             <div className="projectModalContainer">
                                 <div className="projectImageAndTitle">
                                     <figure>
-                                        <img className="projectBanner" src={ "./images/" + this.props.data.images.banner } alt={ this.props.data.title } />
+                                        <img
+                                            className="projectBanner"
+                                            src={ "./images/" + this.props.data.images.banner }
+                                            alt={ "Logo for " + this.props.data.title }
+                                        />
                                         <figcaption>
                                             <span className="projectTitle">
                                                 { this.props.data.title }

@@ -11,7 +11,7 @@ class ProjectContainer extends React.Component {
             projectModalData: null
         }
         
-        this.allProjects = [... this.props.projects]
+        this.allProjects = [...this.props.projects]
 
         this.releasedProjects = this.allProjects.filter(
             (project) => { return project.released }
@@ -69,7 +69,7 @@ class ProjectContainer extends React.Component {
                         These projects were individually marketed and released to the public.
                     </h2>
                     <h3>
-                        Click on a project to see more notes and images!
+                        Click on a project to see more notes, links, and images!
                     </h3>
                     <div className="projectsContainer">
                         

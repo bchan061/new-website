@@ -120,7 +120,8 @@ const Courses = [
             },
             {
                 title: "Pathtracer",
-                description: "Extensive optimized path-tracer to raycast different models and environments of different lighting, materials, and cameras (including differing lens and focus)."
+                description: "Extensive optimized path-tracer to raycast different models and environments of different lighting, materials, and cameras (including differing lens and focus).",
+                link: "./pathtracer.html"
             },
             {
                 title: "Cloth Simulator",

@@ -41,8 +41,8 @@ class Carousel extends React.Component {
         }
         
         if (
-            (left && index == 0) ||
-            (!left && index == this.props.images.length - 1)
+            (left && index === 0) ||
+            (!left && index === this.props.images.length - 1)
         ) {
             classNames += "carouselArrowInactive "
         }
@@ -51,7 +51,7 @@ class Carousel extends React.Component {
     }
     
     render() {
-        if (this.props.images == null || this.props.images.length == 0) {
+        if (this.props.images === null || this.props.images.length === 0) {
             return ( null )
         }
         
@@ -60,7 +60,7 @@ class Carousel extends React.Component {
                 <a className={ this.getArrowStyle(true) } href="#" onClick={ this.previousSlide }> &#10094; </a>
                 {
                     this.props.images && this.props.images.map((image, index) => {
-                        if (this.state.current == index) {
+                        if (this.state.current === index) {
                             return (
                                 <img className="carouselImage" src={ "./images/" + image } key={ index } />
                             )

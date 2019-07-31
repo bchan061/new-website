@@ -1,0 +1,66 @@
+
+body {
+    padding: 12.5%;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+    background-color: rgb(164, 149, 221);
+}
+h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.centered {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+.caption {
+    
+}
+.title {
+    font-size: 3.5em;
+}
+.subtitle {
+    color: #303030;
+}
+.part {
+    width: 70%;
+    vertical-align: top;
+}
+.partTitle {
+    font-size: 3em;
+}
+.text {
+    font-size: 1.5em;
+    text-indent: 1.5em;
+}
+.code {
+    background-color: #CCCCCC;
+    font-family: monospace;
+}
+.math {
+    font-family: monospace;
+}
+.figure {
+    background-color: #DDDDDD;
+    padding: 0.5em;
+}
+.figureCell {
+    width: 30%;
+}
+.image {
+    max-width: 100%;
+}
+.row {
+    padding: 1rem;
+}
+.filler {
+    height: 6rem;
+}
+
+.linkTitle {
+    font-size: 2em;
+}
