@@ -12,7 +12,7 @@ class Website extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
+                { /* <Navbar /> */ }
                 <Intro />
                 <ProjectContainer projects={ Projects } />
                 <CourseContainer courses={ Courses } />

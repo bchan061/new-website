@@ -1,5 +1,34 @@
 const Projects = [
     {
+        title: "Turbo Blast",
+        start: 2019,
+        released: true,
+        major: true,
+        summary: `Massively multiplayer 3D racing game with procedurally generated tracks and dynamic rigid-body physics.
+        Supports an arbitrary amount of players through connected controllers and keyboards.`,
+        description: `Created with Java (libGDX) for desktop and Android. Modelling done with Blender. Physics handled with a wrapper to the Bullet physics engine.`,
+        tools: [
+            "libgdx",
+        ],
+        languages: [
+            "Java",
+            "C++"
+        ],
+        links: [
+            {
+                text: 'Download Windows/Linux/Mac and Android versions here!',
+                link: 'https://github.com/beareye/racing-game/releases'
+            }
+        ],
+        images: {
+            banner: "turbo-blast-1.png",
+            slideshow: [
+                "turbo-blast-2.png"
+            ]
+        },
+        soundcloud: "https://soundcloud.com/bchan061/turbo-boost-night"
+    },
+    {
         title: "Super Koala Climber",
         start: 2015,
         end: 2017,
@@ -246,6 +275,30 @@ const Projects = [
                 "bracket-2.png",
                 "bracket-3.png",
                 "bracket-4.png"
+            ]
+        }
+    },
+    {
+        title: "tabr",
+        start: 2018,
+        major: true,
+        summary: `Guitar tab editor and viewer. Supports tabs created in JSON, which can be created and stored in a local database.`,
+        description: `Front-end created with HTML5/CSS3, React, and Howler.js.
+        Back-end created with Express.js and SQLite3.`,
+        tools: [
+            "react",
+            "nodejs"
+        ],
+        languages: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "SQL"
+        ],
+        images: {
+            banner: "tabr-1.png",
+            slideshow: [
+                "tabr-2.png"
             ]
         }
     }

@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: rgb(255, 252, 241);
 }
 
 #projects {
@@ -24,6 +25,20 @@ html {
     text-align: center;
     margin: 0 auto;
     width: 95%;
+}
+
+#intro {
+    background-color: hsl(238, 50%, 90%);
+    border: 0.5em solid hsl(238, 50%, 90%);
+    border-radius: 0.125em;
+    text-align: center;
+    margin: 0 auto;
+    width: 95%;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .largeTitle {
@@ -224,6 +239,7 @@ html {
 
 .projectModalLinks {
     padding: 1em;
+    text-align: left;
 }
 
 .languages {
@@ -285,4 +301,18 @@ html {
     border: 1em solid hsl(125, 50%, 90%);
     border-radius: 0.25em;
     margin: 2em;
+}
+
+.profilePicture {
+    border-radius: 50%;
+    width: 10em;
+    height: auto;
+}
+
+.profileName {
+    font-size: 3em;
+}
+
+.links {
+    font-size: 2em;
 }
