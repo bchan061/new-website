@@ -111,22 +111,22 @@ const Courses = [
             {
                 title: "Rasterizer",
                 description: "Software rasterizer to render various 2D texture-mapped geometry and SVG files.",
-                link: "https://cal-cs184-student.github.io/p1-rasterizer-bchan061/"
+                link: "https://bchan061.github.io/cs184-p1-rasterizer/"
             },
             {
                 title: "MeshEdit",
                 description: "Mesh editor and renderer for meshes defined with half-edges. Also computes Bezier curves and Loop subdivision.",
-                link: "https://cal-cs184-student.github.io/p2-meshedit-bchan061/"
+                link: "https://bchan061.github.io/cs184-p2-meshedit/"
             },
             {
                 title: "Pathtracer",
                 description: "Extensive optimized path-tracer to raycast different models and environments of different lighting, materials, and cameras (including differing lens and focus).",
-                link: "./pathtracer.html"
+                link: "./other/pathtracer.html"
             },
             {
                 title: "Cloth Simulator",
                 description: "Cloth simulator to render and edit cloths of varying materials and properties. Includes various GLSL shaders and physically accurate kinematics and lighting.",
-                link: "https://cal-cs184-student.github.io/p4-clothsim-bchan061/"
+                link: "https://bchan061.github.io/cs184-p4-clothsim/"
             }
         ]
     },
