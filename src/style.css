@@ -315,4 +315,16 @@ html {
 
 .links {
     font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 3em;
+    height: auto;
+}
+
+.profileLink {
+    margin: 0 1em;
 }

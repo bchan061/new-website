@@ -1,5 +1,39 @@
 const Projects = [
     {
+        title: "RateMe",
+        start: 2019,
+        released: true,
+        major: true,
+        summary: `Item rater with support for large-scale data and support for an unlimited amount of users.`,
+        description: `Scraper for data written in Python. Front-end created with HTML5/CSS3, and React.
+        Back-end created with Express.js and Mongoose/MongoDB. Hosted on Heroku; database backed by MongoDB Cloud Atlas.`,
+        tools: [
+            "react",
+            "nodejs",
+            "mongodb"
+        ],
+        languages: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "MongoDB",
+            "Python"
+        ],
+        images: {
+            banner: "rateme-1.png",
+            slideshow: [
+                "rateme-2.png",
+                "rateme-3.png"
+            ]
+        },
+        links: [
+            {
+                text: 'Cast your vote here!',
+                link: 'http://bchan-rateme.herokuapp.com/'
+            }
+        ]
+    },
+    {
         title: "Turbo Blast",
         start: 2019,
         released: true,
@@ -27,6 +61,41 @@ const Projects = [
             ]
         },
         soundcloud: "https://soundcloud.com/bchan061/turbo-boost-night"
+    },
+    {
+        title: "Bogtris",
+        start: 2018,
+        released: true,
+        major: true,
+        summary: `Tetris clone that follows the current (2006) Tetris guideline, including support for Super Rotational System (SRS) twists.
+        Extra features include multiplayer modes, back-to-back bonuses, and combos.
+        Battle AI implemented with genetic algorithms. `,
+        description: `Written with Pixi.JS and Javascript (ES6). Backend written with Node.js and Express.js. `,
+        tools: [
+            "pixijs",
+            "nodejs"
+        ],
+        languages: [
+            "JavaScript",
+            "HTML5",
+            "CSS3"
+        ],
+        images: {
+            banner: "bogtris-1.png",
+            slideshow: [
+                "bogtris-2.png"
+            ]
+        },
+        links: [
+            {
+                text: 'Play the single-player endless version here.',
+                link: 'http://ocf.io/branchan/bogtris'
+            },
+            {
+                text: 'Play the multiplayer version here. (Open the console to see evolution take place.)',
+                link: 'http://ocf.io/branchan/bogtris-ai/bogtris/public/index.html'
+            }
+        ]
     },
     {
         title: "Super Koala Climber",
@@ -175,40 +244,6 @@ const Projects = [
                 "shootupSurvival-2.jpg"
             ]
         }
-    },
-    {
-        title: "Bogtris",
-        start: 2018,
-        major: true,
-        summary: `Tetris clone that follows the current (2006) Tetris guideline, including support for Super Rotational System (SRS) twists.
-        Extra features include multiplayer modes, back-to-back bonuses, and combos.
-        Battle AI implemented with genetic algorithms. `,
-        description: `Written with Pixi.JS and Javascript (ES6). Backend written with Node.js and Express.js. `,
-        tools: [
-            "pixijs",
-            "nodejs"
-        ],
-        languages: [
-            "JavaScript",
-            "HTML5",
-            "CSS3"
-        ],
-        images: {
-            banner: "bogtris-1.png",
-            slideshow: [
-                "bogtris-2.png"
-            ]
-        },
-        links: [
-            {
-                text: 'Play the single-player endless version here.',
-                link: 'http://ocf.io/branchan/bogtris'
-            },
-            {
-                text: 'Play the multiplayer version here. (Open the console to see evolution take place.)',
-                link: 'http://ocf.io/branchan/bogtris-ai/bogtris/public/index.html'
-            }
-        ]
     },
     {
         title: "Flashcards",

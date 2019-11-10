@@ -7,13 +7,28 @@ class Intro extends React.Component {
         this.links = [
             {
                 name: 'GitHub',
+                image: 'logos/github.png',
                 link: 'https://github.com/bchan061'
+            },
+            {
+                name: 'LinkedIn',
+                image: 'logos/linkedin.png',
+                link: 'https://www.linkedin.com/in/brandon-chan-521a42177/'
             },
             {
                 name: 'Resume',
                 link: 'other/ResumeCA.pdf'
             }
         ]
+
+        this.linksAndDivider = []
+        for (let link of this.links) {
+            this.linksAndDivider.push(link)
+            this.linksAndDivider.push({divider: true})
+        }
+
+        // Remove the last link
+        this.linksAndDivider.splice(this.linksAndDivider.length - 1, 1)
     }
 
     render() {
@@ -27,22 +42,30 @@ class Intro extends React.Component {
 
                 <h2 className="profileName"> Brandon Chan </h2>
                 
-                <p className="links">
+                <span className="links">
                 {
-                    this.links.map((link, index) => {
-                        let divider = ''
-                        if (index < this.links.length - 1) {
-                            divider = ' • '
+                    this.linksAndDivider.map((object, index) => {
+                        if (object.divider) {
+                            return (
+                                <span> • </span>
+                            )
                         }
+                        let link = object
                         return (
-                            <span>
-                                <a href={ link.link } key={ index }>{ link.name }</a>
-                                { divider }
-                            </span>
+                            <a href={ link.link } key={ index } className="profileLink">
+                                {
+                                    link.image && <img src={link.image} alt={link.name} className="logo">
+
+                                    </img>
+                                }
+                                {
+                                    !link.image && link.name
+                                }
+                            </a>
                         )
                     })
                 }
-                </p>
+                </span>
             </div>
         )
     }

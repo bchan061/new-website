@@ -147,17 +147,20 @@ const Courses = [
     {
         title: "Principles and Techniques of Data Science",
         number: "DS100",
-        term: "Fall 2019"
+        term: "Fall 2019",
+        link: "http://www.ds100.org/fa19/"
     },
     {
         title: "Introduction to Database Systems",
         number: "CS186",
-        term: "Fall 2019"
+        term: "Fall 2019",
+        link: "https://cs186berkeley.net/"
     },
     {
         title: "Introduction to Machine Learning",
         number: "CS189",
-        term: "Fall 2019"
+        term: "Fall 2019",
+        link: "https://www.eecs189.org/"
     }
 ]
 
