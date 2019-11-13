@@ -270,10 +270,10 @@ const Projects = [
     {
         title: "Amiibo® Selector",
         start: 2018,
-        summary: `Personal project to experiment with HTTP servers and frontend web development.
+        summary: `Personal project to experiment with REST APIs, HTTP servers, and frontend web development.
         Single page application with support for custom names. `,
         description: `Coded with Java (Spark), JavaScript, and HTML5 (Bootstrap + jQuery).
-        Backend serves HTML pages, images, and JSON data for the frontend. `,
+        Backend serves HTML pages, images, and JSON data for the frontend.`,
         tools: [
             "spark",
             "bootstrap",
