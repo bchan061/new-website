@@ -1,106 +1,101 @@
 import React from 'react'
+import styled from 'styled-components'
 
+import { Jumbotron, Row, Container, Tabs, Tab } from 'react-bootstrap'
+
+import Projects from './../data/Projects'
+import Courses from './../data/Courses'
 import Project from './Project'
-import ProjectModal from './ProjectModal'
+
+const ProjectJumbotron = styled(Jumbotron)`
+    background-color: hsl(200, 91%, 75%);
+`
+
+const ProjectTitle = styled.h1`
+    font-size: 3.5em;
+    text-align: center;
+    padding: 1em;
+`
+
+const ProjectTabs = styled(Tabs)`
+    
+`
 
 class ProjectContainer extends React.Component {
     constructor(props) {
         super(props)
-        
-        this.state = {
-            projectModalData: null
+        this.releasedProjects = Projects.filter(project => project.released)
+        this.unreleasedProjects = Projects.filter(project => !project.released)
+
+        // Get all projects in the courses
+        this.classProjects = []
+        for (let course of [...Courses].reverse()) {
+            if (course.projects) {
+                let convertedProjects = [...course.projects].reverse().map(courseProject => ({
+                    title: courseProject.title,
+                    start: course.term,
+                    course: `${course.number} - ${course.title}`,
+                    summary: courseProject.description,
+                    links: (courseProject.link ? [{
+                        text: courseProject.writeup ? "Writeup" : "Description",
+                        link: courseProject.link
+                    }]: undefined),
+                    image: courseProject.image
+                }))
+                this.classProjects.push(...convertedProjects)
+            }
         }
-        
-        this.allProjects = [...this.props.projects]
-
-        this.releasedProjects = this.allProjects.filter(
-            (project) => { return project.released }
-        )
-
-        this.otherProjects = this.allProjects.filter(
-            (project) => { return !project.released }
-        )
-
-        this.sortProjectArray(this.releasedProjects)
-        this.sortProjectArray(this.otherProjects)
-        
-        this.showProjectModal = this.showProjectModal.bind(this)
-        this.closeProjectModal = this.closeProjectModal.bind(this)
-    }
-
-    sortProjectArray(arr) {
-        // Alphabetical and reverse year (so more recent projects come up)
-        arr.sort(
-            (a, b) => {
-                return a.title.localeCompare(b.title) + (b.start - a.start) * 100
-            }
-        )
-    }
-    
-    showProjectModal(data) {
-        this.setState((state, props) => {
-            return {
-                projectModalData: data
-            }
-        })
-    }
-    
-    closeProjectModal() {
-        this.setState((state, props) => {
-            return {
-                projectModalData: null
-            }
-        })
+        console.log(this.classProjects)
     }
 
     render() {
         return (
-            <div id="projects">
-                <ProjectModal data={ this.state.projectModalData } onExit={ this.closeProjectModal }/> 
-                
-                <h1 className="largeTitle centeredText">
-                    Projects
-                </h1>
-                <div className="releasedProjectsContainer">
-                    <h1 className="subtitle extrabold">
-                        Released Projects
-                    </h1>
-                    <h2 className="titleDescription">
-                        These projects were individually marketed and released to the public.
-                    </h2>
-                    <h3>
-                        Click on a project to see more notes, links, and images!
-                    </h3>
-                    <div className="projectsContainer">
-                        
-                        {
-                            this.releasedProjects && this.releasedProjects.map((project, index) => {
-                                return (
-                                    <Project data={project} onClick={ this.showProjectModal } key={index}/>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-                <div className="otherProjectsContainer">
-                    <h1 className="subtitle extrabold">
-                        Other Projects
-                    </h1>
-                    <h2 className="titleDescription">
-                      These more personal projects were made for learning new tools. 
-                    </h2>
-                    <div className="projectsContainer">
-                        
-                        {
-                            this.otherProjects && this.otherProjects.map((project, index) => {
-                                return (
-                                    <Project data={project} onClick={ this.showProjectModal } key={index}/>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-            </div>
+            <ProjectJumbotron id="projects" fluid>
+                <Container>
+                    <ProjectTitle>Projects</ProjectTitle>
+                    <ProjectTabs defaultActiveKey="released" id="projects-tabs" variant="pills">
+                        <Tab eventKey="released" title="Released">
+                            <Row>
+                                {
+                                    this.releasedProjects.map((project, index) => (
+                                        <Project
+                                            key={index}
+                                            index={index}
+                                            project={project}
+                                        />
+                                    ))
+                                }
+                            </Row>
+                        </Tab>
+                        <Tab eventKey="class" title="Coursework">
+                            <Row>
+                                {
+                                    this.classProjects.map((project, index) => (
+                                        <Project
+                                            key={index}
+                                            index={index}
+                                            project={project}
+                                        />
+                                    ))
+                                }
+                            </Row>
+                        </Tab>
+                        <Tab eventKey="personal" title="Personal">
+                            <Row>
+                                {
+                                    this.unreleasedProjects.map((project, index) => (
+                                        <Project
+                                            key={index}
+                                            index={index}
+                                            project={project}
+                                        />
+                                    ))
+                                }
+                            </Row>
+                        </Tab>
+                    </ProjectTabs>
+                </Container>
+            </ProjectJumbotron>
         )
     }
 }

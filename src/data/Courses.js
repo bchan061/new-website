@@ -64,7 +64,7 @@ const Courses = [
         projects: [
             {
                 title: "RISC-V CPU",
-                description: "Design a working RISC-V CPU in Logisim with a custom-built register file and arithmetic logic unit."
+                description: "Design a pipelined RISC-V CPU in Logisim with a custom-built register file and arithmetic logic unit."
             }
         ]
     },
@@ -111,22 +111,30 @@ const Courses = [
             {
                 title: "Rasterizer",
                 description: "Software rasterizer to render various 2D texture-mapped geometry and SVG files.",
-                link: "https://bchan061.github.io/cs184-p1-rasterizer/"
+                link: "https://bchan061.github.io/cs184-p1-rasterizer/",
+                image: "https://bchan061.github.io/cs184-p1-rasterizer/images/p_6_4.png",
+                writeup: true
             },
             {
                 title: "MeshEdit",
                 description: "Mesh editor and renderer for meshes defined with half-edges. Also computes Bezier curves and Loop subdivision.",
-                link: "https://bchan061.github.io/cs184-p2-meshedit/"
+                link: "https://bchan061.github.io/cs184-p2-meshedit/",
+                image: "https://bchan061.github.io/cs184-p2-meshedit/images/p_6_2.png",
+                writeup: true
             },
             {
                 title: "Pathtracer",
                 description: "Extensive optimized path-tracer to raycast different models and environments of different lighting, materials, and cameras (including differing lens and focus).",
-                link: "./other/pathtracer.html"
+                link: "./other/pathtracer.html",
+                image: "https://bchan061.github.io/cs184-p3-2-pathtracer/images/p_4_dragon_23_005.png",
+                writeup: true
             },
             {
                 title: "Cloth Simulator",
                 description: "Cloth simulator to render and edit cloths of varying materials and properties. Includes various GLSL shaders and physically accurate kinematics and lighting.",
-                link: "https://bchan061.github.io/cs184-p4-clothsim/"
+                link: "https://bchan061.github.io/cs184-p4-clothsim/",
+                image: "https://bchan061.github.io/cs184-p4-clothsim/images/p_5_mirror.png",
+                writeup: true
             }
         ]
     },

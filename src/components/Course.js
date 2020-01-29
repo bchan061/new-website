@@ -1,74 +1,62 @@
 import React from 'react'
+import styled from 'styled-components'
+
+import { Card, ListGroup, OverlayTrigger, Tooltip, Col } from 'react-bootstrap'
+
+// Stagger cards
+const CourseCard = styled(Card)`
+    margin: 1em;
+`
 
 class Course extends React.Component {
-    render() {
-        let title = this.props.data.number
-        if (this.props.data.link) {
-            title = ( <a href={ this.props.data.link }> {title} </a> )
+    listItems(items) {
+        if (!items) {
+            return ''
         }
-        return (
-            <div className="course">
-                <h1>
-                    { title }
-                </h1>
-                <h2 className="titleDescription">
-                    { this.props.data.title } ({ this.props.data.term })
-                </h2>
-                
-                <p class="languages">
-                    {
-                        this.props.data.languages && this.props.data.languages.map((language, index) => {
-                            if (index < this.props.data.languages.length - 1) {
-                                return (
-                                    <b key={index}>{ language }, </b>
-                                )
-                            } else {
-                                return (
-                                    <b key={index}>{ language }</b>
-                                )
-                            }
-                        })
-                    }
-                </p>
-                
-                <p className="frameworks">
-                    {
-                        this.props.data.frameworks && this.props.data.frameworks.map((language, index) => {
-                            if (index < this.props.data.frameworks.length - 1) {
-                                return (
-                                    <b key={index}>{ language }, </b>
-                                )
-                            } else {
-                                return (
-                                    <b key={index}>{ language }</b>
-                                )
-                            }
-                        })
-                    }
-                </p>
+        let allItems = ''
+        for (let i = items.length - 1; i >= 0; i--) {
+            let item = items[i]
+            allItems += item
+            if (i > 0) {
+                allItems += ', '
+            }
+        }
+        return allItems
+    }
 
-                <div className="projects">
-                    <ul className="projectList">
-                        {
-                            this.props.data.projects && this.props.data.projects.map((project, index) => {
-                                let title = (<b> { project.title } </b>)
-                                if (project.link) {
-                                    title = (
-                                        <a href={ project.link }>
-                                            <b> { project.title } </b>
-                                        </a>
-                                    )
+    render() {
+        return (
+            <Col md={6}>
+                <CourseCard>
+                    <Card.Header> { this.props.course.number } </Card.Header>
+                    <Card.Body>
+                        <Card.Title>
+                            <a href={this.props.course.link ? this.props.course.link : null}> { this.props.course.title } </a>
+                        </Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">{this.listItems(this.props.course.languages)}</Card.Subtitle>
+                        { this.props.course.projects && <b> Projects </b> }
+                        <ListGroup>
+                        { this.props.course.projects && this.props.course.projects.map((project, index) => (
+                            <OverlayTrigger
+                                key={index}
+                                overlay={
+                                    <Tooltip id={`tooltip-course-project-${index}`}>
+                                        {project.description}
+                                    </Tooltip>
                                 }
-                                return (
-                                    <li key={ index }>
-                                        { title }: { project.description }
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                </div>
-            </div>
+                            >
+                                <ListGroup.Item action={project.link} href={project.link}>
+                                    { project.title }
+                                </ListGroup.Item>
+                            </OverlayTrigger>
+                        ))}
+                        </ListGroup>
+                    </Card.Body>
+                    <Card.Footer>
+                        { this.props.course.term }
+                    </Card.Footer>
+                </CourseCard>
+            </Col>
         )
     }
 }

@@ -1,21 +1,18 @@
 import React from 'react'
 
-import Navbar from './Navbar'
+import WebsiteNavbar from './WebsiteNavbar'
 import Intro from './Intro'
-import ProjectContainer from './ProjectContainer'
 import CourseContainer from './CourseContainer'
-
-import Projects from './../data/Projects'
-import Courses from './../data/Courses'
+import ProjectContainer from './ProjectContainer'
 
 class Website extends React.Component {
     render() {
         return (
             <div>
-                { /* <Navbar /> */ }
+                <WebsiteNavbar />
                 <Intro />
-                <ProjectContainer projects={ Projects } />
-                <CourseContainer courses={ Courses } />
+                <ProjectContainer />
+                <CourseContainer />
             </div>
         )
     }

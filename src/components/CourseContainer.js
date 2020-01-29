@@ -1,25 +1,40 @@
 import React from 'react'
+import styled from 'styled-components'
 
+import { Container, Jumbotron, Row } from 'react-bootstrap'
+
+import Courses from './../data/Courses'
 import Course from './Course'
+
+const CourseJumbotron = styled(Jumbotron)`
+    background-color: hsl(134, 91%, 75%);
+`
+
+const CourseTitle = styled.h1`
+    font-size: 3.5em;
+    text-align: center;
+    padding: 1em;
+`
+
+const CourseContainerList = styled(Container)`
+    
+`
 
 class CourseContainer extends React.Component {
     render() {
         return (
-            <div id="courses">
-                <h1 className="largeTitle centeredText">
-                    Courses
-                </h1>
-                <h2 className="titleDescription">
-                    This includes important classes that I've taken in my time in the University of California, Berkeley (Fall 2017 - Fall 2019).
-                </h2>
-                {
-                    this.props.courses && this.props.courses.map((course, index) => {
-                        return (
-                            <Course data={ course } />
-                        )
-                    })
-                }
-            </div>
+            <CourseJumbotron id="courses" fluid>
+                <CourseContainerList>
+                    <CourseTitle>Courses</CourseTitle>
+                    <Row>
+                        {
+                            Courses.map((course, index) => (
+                                <Course key={index} course={course} />
+                            ))
+                        }
+                    </Row>
+                </CourseContainerList>
+            </CourseJumbotron>
         )
     }
 }

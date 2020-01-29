@@ -20,7 +20,7 @@ const Projects = [
             "Python"
         ],
         images: {
-            banner: "rateme-1.png",
+            banner: "gifs/rateme.gif",
             slideshow: [
                 "rateme-2.png",
                 "rateme-3.png"
@@ -55,11 +55,12 @@ const Projects = [
             }
         ],
         images: {
-            banner: "turbo-blast-1.png",
+            banner: "gifs/turboblast.gif",
             slideshow: [
                 "turbo-blast-2.png"
             ]
         },
+        github: "https://github.com/bchan061/racing-game",
         soundcloud: "https://soundcloud.com/bchan061/turbo-boost-night"
     },
     {
@@ -81,7 +82,7 @@ const Projects = [
             "CSS3"
         ],
         images: {
-            banner: "bogtris-1.png",
+            banner: "gifs/bogtris.gif",
             slideshow: [
                 "bogtris-2.png"
             ]
@@ -95,16 +96,16 @@ const Projects = [
                 text: 'Play the multiplayer version here. (Open the console to see evolution take place.)',
                 link: 'http://ocf.io/branchan/bogtris-ai/bogtris/public/index.html'
             }
-        ]
+        ],
+        github: "https://github.com/bchan061/bogtris"
     },
     {
         title: "Super Koala Climber",
         start: 2015,
-        end: 2017,
         released: true,
         major: true,
         summary: `Fast-paced arcade game with multiplayer leaderboards and social media integration.
-        Available on the App Store in both English and Spanish.`,
+        Was available on the App Store in both English and Spanish.`,
         description: `Created with Java (libGDX) for desktop, Android, and iOS (with the now-defunct RoboVM).
         Originally used the Facebook API to integrate friends and avatars into the user experience.
         Later repurposed to use Game Center for the iOS version.
@@ -124,6 +125,7 @@ const Projects = [
                 "superKoalaClimber-2.jpg"
             ]
         },
+        github: "https://github.com/bchan061/oldgames/tree/master/KrazyKoala",
         soundcloud: "https://soundcloud.com/bchan061/game"
     },
     {
@@ -150,11 +152,10 @@ const Projects = [
     {
         title: "Commando Joe: Episode 1",
         start: 2013,
-        end: 2017,
         released: true,
         major: true,
         summary: `Stylish platformer with multiple weapons, various enemies and bosses, and dynamic environments.
-        Includes leaderboards and in-app purchases to encourage competitive play. Self-published in the App Store.`,
+        Includes leaderboards and in-app purchases to encourage competitive play. Was self-published in the App Store.`,
         description: `Created with JavaScript (ImpactJS), originally for HTML5.
         Later ported to the App Store with Ejecta, and to Android devices with CocoonJS.
         In-app-purchases and Game Center leaderboards implemented via a native bridge to Objective-C.
@@ -170,7 +171,7 @@ const Projects = [
             "Objective-C"
         ],
         images: {
-            banner: "commandoJoe2.png",
+            banner: "gifs/commandojoe2.gif",
             slideshow: [
                 "commandoJoe2-1.jpg",
                 "commandoJoe2-2.jpg"
@@ -182,15 +183,15 @@ const Projects = [
                 link: './games/CommandoJoe2/index.html'
             }
         ],
+        github: "https://github.com/bchan061/oldgames/tree/master/CommandoJoe2",
         soundcloud: "https://soundcloud.com/bchan061/commando-joe-episode-1-infilitration"
     },
     {
         title: "Commando Joe: Prologue",
         start: 2012,
-        end: 2017,
         released: true,
         major: true,
-        summary: `Platformer with designed levels, dynamic environments, and various enemy types. Self-published in the App Store.`,
+        summary: `Platformer with designed levels, dynamic environments, and various enemy types. Was self-published in the App Store.`,
         description: `Created with JavaScript (ImpactJS), originally for HTML5.
         Later ported to the App Store with Ejecta, and to Android devices with CocoonJS.
         Music created with TuxGuitar; art created with Paint.NET and Inkscape. `,
@@ -204,7 +205,7 @@ const Projects = [
             "Objective-C"
         ],
         images: {
-            banner: "commandoJoe.png",
+            banner: "gifs/commandojoe.gif",
             slideshow: [
                 "commandoJoe-1.jpg",
                 "commandoJoe-2.jpg",
@@ -216,15 +217,15 @@ const Projects = [
                 text: 'Play a web version (from 2012) here!',
                 link: './games/CommandoJoe/index.html'
             }
-        ]
+        ],
+        github: "https://github.com/bchan061/oldgames/tree/master/CommandoJoe"
     },
     {
         title: "Shootup Survival",
         start: 2012,
-        end: 2017,
         released: true,
         major: true,
-        summary: `Endless shoot-em-up with touch controls, alternating enemy types, and powerups. Self-published in the App Store.`,
+        summary: `Endless shoot-em-up with touch controls, alternating enemy types, and powerups. Was self-published in the App Store.`,
         description: `Prototyped with C# (XNA); final app created with Objective-C (Cocos2D).
         Music composed with GarageBand; art created in Paint.NET and Pinta. `,
         tools: [
@@ -243,7 +244,8 @@ const Projects = [
                 "shootupSurvival-1.jpg",
                 "shootupSurvival-2.jpg"
             ]
-        }
+        },
+        github: "https://github.com/bchan061/old-shooter"
     },
     {
         title: "Flashcards",
@@ -265,15 +267,16 @@ const Projects = [
             slideshow: [
                 "flashcards-2.png"
             ]
-        }
+        },
+        github: "https://github.com/bchan061/Flashcards"
     },
     {
         title: "Amiibo® Selector",
         start: 2018,
-        summary: `Personal project to experiment with HTTP servers and frontend web development.
+        summary: `Personal project to experiment with REST APIs, HTTP servers, and frontend web development.
         Single page application with support for custom names. `,
         description: `Coded with Java (Spark), JavaScript, and HTML5 (Bootstrap + jQuery).
-        Backend serves HTML pages, images, and JSON data for the frontend. `,
+        Backend serves HTML pages, images, and JSON data for the frontend.`,
         tools: [
             "spark",
             "bootstrap",
@@ -311,7 +314,8 @@ const Projects = [
                 "bracket-3.png",
                 "bracket-4.png"
             ]
-        }
+        },
+        github: "https://github.com/bchan061/bracket"
     },
     {
         title: "tabr",
@@ -335,7 +339,8 @@ const Projects = [
             slideshow: [
                 "tabr-2.png"
             ]
-        }
+        },
+        github: "https://github.com/bchan061/guitartab"
     }
 ]
 
